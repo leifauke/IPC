@@ -1,0 +1,294 @@
+Operation =6
+Option =0
+Where ="(((ACT_REV_CODES.Proj_Num) Like \"05901\"))"
+Begin InputTables
+    Name ="ACT_CAT"
+    Name ="ACT_REV_CODES"
+    Name ="ACT_REV"
+    Name ="MONTHS"
+    Name ="REV_PER_DATA_Act"
+End
+Begin OutputColumns
+    Expression ="ACT_REV_CODES.Proj_Num"
+    GroupLevel =2
+    Alias ="Expr1"
+    Expression ="Left([CBS],2)"
+    GroupLevel =2
+    Expression ="ACT_REV_CODES.Currency"
+    GroupLevel =2
+    Expression ="ACT_REV_CODES.Type"
+    GroupLevel =2
+    Expression ="MONTHS.Month_Num"
+    GroupLevel =1
+    Alias ="SumOfActual_Curr_Per"
+    Expression ="Sum(REV_PER_DATA_Act.Actual_Curr_Per)"
+End
+Begin Joins
+    LeftTable ="ACT_REV_CODES"
+    RightTable ="ACT_REV"
+    Expression ="ACT_REV_CODES.Proj_Num = ACT_REV.Proj_Num"
+    Flag =1
+    LeftTable ="ACT_REV_CODES"
+    RightTable ="ACT_REV"
+    Expression ="ACT_REV_CODES.Act_Rev_Code = ACT_REV.Act_Rev_Code"
+    Flag =1
+    LeftTable ="ACT_CAT"
+    RightTable ="ACT_REV"
+    Expression ="ACT_CAT.Proj_Num = ACT_REV.Proj_Num"
+    Flag =1
+    LeftTable ="ACT_CAT"
+    RightTable ="ACT_REV"
+    Expression ="ACT_CAT.Act_Num = ACT_REV.Act_Num"
+    Flag =1
+    LeftTable ="ACT_REV"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="ACT_REV.Proj_Num = REV_PER_DATA_Act.Proj_Num"
+    Flag =1
+    LeftTable ="ACT_REV"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="ACT_REV.Act_Num = REV_PER_DATA_Act.Act_Num"
+    Flag =1
+    LeftTable ="ACT_REV"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="ACT_REV.Act_Rev_Code = REV_PER_DATA_Act.Act_Rev_Code"
+    Flag =1
+    LeftTable ="MONTHS"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="MONTHS.Year = REV_PER_DATA_Act.Year"
+    Flag =1
+    LeftTable ="MONTHS"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="MONTHS.Month = REV_PER_DATA_Act.Month"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="ACT_REV_CODES.Proj_Num"
+    Flag =0
+    Expression ="Left([CBS],2)"
+    Flag =0
+End
+Begin Groups
+    Expression ="ACT_REV_CODES.Proj_Num"
+    GroupLevel =2
+    Expression ="Left([CBS],2)"
+    GroupLevel =2
+    Expression ="ACT_REV_CODES.Currency"
+    GroupLevel =2
+    Expression ="ACT_REV_CODES.Type"
+    GroupLevel =2
+    Expression ="MONTHS.Month_Num"
+    GroupLevel =1
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+Begin
+    Begin
+        dbText "Name" ="ACT_REV_CODES.Proj_Num"
+        dbInteger "ColumnWidth" ="870"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="ACT_REV_CODES.Currency"
+        dbInteger "ColumnWidth" ="855"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="ACT_REV_CODES.Type"
+        dbInteger "ColumnWidth" ="540"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="PIVOT"
+        dbText "Format" ="Standard"
+        dbByte "DecimalPlaces" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200504"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200505"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200506"
+        dbInteger "ColumnWidth" ="1035"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200507"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200508"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200509"
+        dbInteger "ColumnWidth" ="810"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200510"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200511"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200512"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200601"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200602"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200603"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200604"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200605"
+        dbInteger "ColumnWidth" ="945"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200606"
+        dbInteger "ColumnWidth" ="1035"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200607"
+        dbInteger "ColumnWidth" ="810"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200608"
+        dbInteger "ColumnWidth" ="810"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="200609"
+        dbInteger "ColumnWidth" ="810"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="Expr1"
+        dbInteger "ColumnWidth" ="600"
+        dbBoolean "ColumnHidden" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="SumOfOriginal_Baseline_Early_Curr_Per"
+        dbText "Format" ="Standard"
+        dbByte "DecimalPlaces" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="SumOfActual_Curr_Per"
+    End
+End
+Begin
+    State =0
+    Left =0
+    Top =0
+    Right =1705
+    Bottom =973
+    Left =-1
+    Top =-1
+    Right =1689
+    Bottom =377
+    Left =0
+    Top =0
+    ColumnsShown =559
+    Begin
+        Left =209
+        Top =6
+        Right =372
+        Bottom =159
+        Top =0
+        Name ="ACT_CAT"
+        Name =""
+    End
+    Begin
+        Left =245
+        Top =196
+        Right =360
+        Bottom =334
+        Top =0
+        Name ="ACT_REV_CODES"
+        Name =""
+    End
+    Begin
+        Left =449
+        Top =6
+        Right =545
+        Bottom =159
+        Top =0
+        Name ="ACT_REV"
+        Name =""
+    End
+    Begin
+        Left =1065
+        Top =4
+        Right =1233
+        Bottom =187
+        Top =0
+        Name ="MONTHS"
+        Name =""
+    End
+    Begin
+        Left =631
+        Top =6
+        Right =846
+        Bottom =255
+        Top =0
+        Name ="REV_PER_DATA_Act"
+        Name =""
+    End
+End

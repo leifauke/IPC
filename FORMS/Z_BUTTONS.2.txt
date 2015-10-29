@@ -1,0 +1,419 @@
+Version =20
+VersionRequired =20
+Checksum =1957486307
+Begin Form
+    RecordSelectors = NotDefault
+    MaxButton = NotDefault
+    MinButton = NotDefault
+    ControlBox = NotDefault
+    AutoCenter = NotDefault
+    NavigationButtons = NotDefault
+    DefaultView =0
+    ScrollBars =0
+    ViewsAllowed =1
+    BorderStyle =1
+    GridX =5
+    GridY =5
+    Width =3401
+    ItemSuffix =8
+    Right =22920
+    Bottom =16620
+    RecSrcDt = Begin
+        0x9bce2710744be240
+    End
+    GUID = Begin
+        0xab86f0d8a8d61a45be78c55c9395b644
+    End
+    NameMap = Begin
+        0x0acc0e5500000000000000000000000000000000000000000c00000005000000 ,
+        0x0000000000000000000000000000
+    End
+    FilterOnLoad =0
+    ShowPageMargins =0
+    AllowLayoutView =0
+    NoSaveCTIWhenDisabled =1
+    Begin
+        Begin CommandButton
+            TextFontFamily =2
+            Width =1701
+            Height =283
+            BorderLineStyle =0
+        End
+        Begin Section
+            Height =907
+            BackColor =15658734
+            Name ="Detail0"
+            GUID = Begin
+                0xcc232e7c1f3a9b4f80b3c73aba4d67db
+            End
+            AlternateBackColor =14211288
+            Begin
+                Begin CommandButton
+                    OverlapFlags =93
+                    TextFontFamily =34
+                    Left =921
+                    Top =113
+                    Width =780
+                    Height =330
+                    Name ="Find_Button"
+                    Caption ="Find"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Arial"
+                    GUID = Begin
+                        0x16da80c38622fe4f8f4bcb4e036e4fa7
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =95
+                    TextFontFamily =34
+                    Left =1700
+                    Top =453
+                    Width =786
+                    Height =336
+                    TabIndex =1
+                    Name ="Next_Button"
+                    Caption ="Button1"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x28000000110000000f0000000100040000000000b40000000000000000000000 ,
+                        0x1000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                        0xffff0000ffffff00888888888888888888888888888888888888888880000000 ,
+                        0x8888800888888888800000008888800088888888840000008888800008888888 ,
+                        0x8004322688888000008888888040e26288888000000888888440366688888000 ,
+                        0x000088888111a3338888800000088888899deaee8888800000888888888caaaa ,
+                        0x8888800008888888811133228888800088888888811909108888800888888888 ,
+                        0x8ff865f088888888888888888f8765f088888888888888888f0865f000000000 ,
+                        0x00000000000000000000000000000000
+                    End
+                    FontName ="Arial"
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    GUID = Begin
+                        0xf6522b7f2deaa648b401d59e2ff1a9fe
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =95
+                    TextFontFamily =34
+                    Left =921
+                    Top =453
+                    Width =771
+                    Height =336
+                    TabIndex =2
+                    Name ="Prev_Button"
+                    Caption ="Button2"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x28000000110000000f0000000100040000000000b40000000000000000000000 ,
+                        0x1000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                        0xffff0000ffffff00888888888888888888888888888888888888888880000000 ,
+                        0x8888888800888888800000008888888000888888840000008888880000888888 ,
+                        0x8004322688888000008888888040e26288880000008888888440366688800000 ,
+                        0x008888888111a3338888000000888888899deaee8888800000888888888caaaa ,
+                        0x8888880000888888811133228888888000888888811909108888888800888888 ,
+                        0x8ff865f088888888888888888f8765f088888888888888888f0865f000000000 ,
+                        0x00000000000000000000000000000000
+                    End
+                    FontName ="Arial"
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    GUID = Begin
+                        0x3d61bfe4b68f0143b816fed6b9a9bc2d
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =95
+                    TextFontFamily =34
+                    Left =1700
+                    Top =113
+                    Width =795
+                    Height =330
+                    TabIndex =3
+                    Name ="New_Button"
+                    Caption ="New"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Arial"
+                    GUID = Begin
+                        0xbc4e344a033fd643843e5dba30bee099
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =95
+                    TextFontFamily =34
+                    Left =113
+                    Top =113
+                    Width =795
+                    Height =330
+                    TabIndex =4
+                    Name ="Save_Button"
+                    Caption ="Save"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Arial"
+                    GUID = Begin
+                        0x445e098df1f35d4ba7fc66312323b141
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =95
+                    TextFontFamily =34
+                    Left =2494
+                    Top =113
+                    Width =795
+                    Height =330
+                    TabIndex =5
+                    Name ="Close_Button"
+                    Caption ="Close"
+                    OnClick ="[Event Procedure]"
+                    FontName ="Arial"
+                    GUID = Begin
+                        0xb681f27722ace34eaffad8a6c8c43f0a
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =87
+                    TextFontFamily =34
+                    Left =121
+                    Top =453
+                    Width =801
+                    Height =336
+                    TabIndex =6
+                    Name ="First_Button"
+                    Caption ="Button6"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x28000000110000000f0000000100040000000000b40000000000000000000000 ,
+                        0x1000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                        0xffff0000ffffff00888888888888888888888888888888888888888880000000 ,
+                        0x8800888888800888800000008800888888000888840000008800888880000888 ,
+                        0x8004322688008888000008888040e26288008880000008888440366688008800 ,
+                        0x000008888111a3338800888000000888899deaee8800888800000888888caaaa ,
+                        0x8800888880000888811133228800888888000888811909108800888888800888 ,
+                        0x8ff865f088888888888888888f8765f088888888888888888f0865f000000000 ,
+                        0x00000000000000000000000000000000
+                    End
+                    FontName ="Arial"
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    GUID = Begin
+                        0x4a90e2929c9f744cb82cbaa0ac6c2840
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =87
+                    TextFontFamily =34
+                    Left =2487
+                    Top =453
+                    Width =801
+                    Height =336
+                    TabIndex =7
+                    Name ="Last_Button"
+                    Caption ="Button7"
+                    OnClick ="[Event Procedure]"
+                    PictureData = Begin
+                        0x28000000110000000f0000000100040000000000b40000000000000000000000 ,
+                        0x1000000000000000000000000000800000800000008080008000000080008000 ,
+                        0x8080000080808000c0c0c0000000ff0000ff000000ffff00ff000000ff00ff00 ,
+                        0xffff0000ffffff00888888888888888888888888888888888888888880000000 ,
+                        0x8800888888800888800000008800088888800888840000008800008888800888 ,
+                        0x8004322688000008888008888040e26288000000888008888440366688000000 ,
+                        0x088008888111a3338800000088800888899deaee8800000888800888888caaaa ,
+                        0x8800008888800888811133228800088888800888811909108800888888800888 ,
+                        0x8ff865f088888888888888888f8765f088888888888888888f0865f000000000 ,
+                        0x00000000000000000000000000000000
+                    End
+                    FontName ="Arial"
+                    ObjectPalette = Begin
+                        0x000301000000000000000000
+                    End
+                    GUID = Begin
+                        0x5f6fe85a10feaa40ac124f47654bb098
+                    End
+
+                    WebImagePaddingLeft =2
+                    WebImagePaddingTop =2
+                    WebImagePaddingRight =1
+                    WebImagePaddingBottom =1
+                    Overlaps =1
+                End
+            End
+        End
+    End
+End
+CodeBehindForm
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+
+
+
+Option Compare Database   'Use database order for string comparisons
+
+Private Sub Close_Button_Click()
+On Error GoTo Err_Close_Button_Click
+
+
+    DoCmd.Close
+
+Exit_Close_Button_Click:
+    Exit Sub
+
+Err_Close_Button_Click:
+    MsgBox error$
+    Resume Exit_Close_Button_Click
+    
+End Sub
+
+Private Sub Find_Button_Click()
+On Error GoTo Err_Find_Button_Click
+
+
+    DoCmd.DoMenuItem A_FORMBAR, A_EDITMENU, 10, , A_MENU_VER20
+
+Exit_Find_Button_Click:
+    Exit Sub
+
+Err_Find_Button_Click:
+    MsgBox error$
+    Resume Exit_Find_Button_Click
+    
+End Sub
+
+Private Sub First_Button_Click()
+On Error GoTo Err_First_Button_Click
+
+
+    DoCmd.GoToRecord , , A_FIRST
+
+Exit_First_Button_Click:
+    Exit Sub
+
+Err_First_Button_Click:
+    MsgBox error$
+    Resume Exit_First_Button_Click
+    
+End Sub
+
+Private Sub Last_Button_Click()
+On Error GoTo Err_Last_Button_Click
+
+
+    DoCmd.GoToRecord , , A_LAST
+
+Exit_Last_Button_Click:
+    Exit Sub
+
+Err_Last_Button_Click:
+    MsgBox error$
+    Resume Exit_Last_Button_Click
+    
+End Sub
+
+Private Sub New_Button_Click()
+On Error GoTo Err_New_Button_Click
+
+
+    DoCmd.GoToRecord , , A_NEWREC
+
+Exit_New_Button_Click:
+    Exit Sub
+
+Err_New_Button_Click:
+    MsgBox error$
+    Resume Exit_New_Button_Click
+    
+End Sub
+
+Private Sub Next_Button_Click()
+On Error GoTo Err_Next_Button_Click
+
+
+    DoCmd.GoToRecord , , A_NEXT
+
+Exit_Next_Button_Click:
+    Exit Sub
+
+Err_Next_Button_Click:
+    MsgBox error$
+    Resume Exit_Next_Button_Click
+    
+End Sub
+
+Private Sub Prev_Button_Click()
+On Error GoTo Err_Prev_Button_Click
+
+
+    DoCmd.GoToRecord , , A_PREVIOUS
+
+Exit_Prev_Button_Click:
+    Exit Sub
+
+Err_Prev_Button_Click:
+    MsgBox error$
+    Resume Exit_Prev_Button_Click
+    
+End Sub
+
+Private Sub Save_Button_Click()
+On Error GoTo Err_Save_Button_Click
+
+
+    DoCmd.DoMenuItem A_FORMBAR, A_FILE, A_SAVERECORD, , A_MENU_VER20
+
+Exit_Save_Button_Click:
+    Exit Sub
+
+Err_Save_Button_Click:
+    MsgBox error$
+    Resume Exit_Save_Button_Click
+    
+End Sub

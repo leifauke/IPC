@@ -1,0 +1,139 @@
+Operation =1
+Option =0
+Begin InputTables
+    Name ="ACT_REV_Curr_Proj"
+    Name ="REV_PER_DATA_Act"
+    Name ="CUT_CURR"
+End
+Begin OutputColumns
+    Expression ="ACT_REV_Curr_Proj.Proj_Num"
+    Expression ="ACT_REV_Curr_Proj.Act_Num"
+    Expression ="ACT_REV_Curr_Proj.Act_Rev_Code"
+    Expression ="ACT_REV_Curr_Proj.Status"
+    Expression ="ACT_REV_Curr_Proj.Actual_Cost"
+    Expression ="REV_PER_DATA_Act.Actual_Cost_Cum"
+    Alias ="Dev_ENok"
+    Expression ="[ACT_REV_Curr_Proj]![Actual_Cost]-[REV_PER_DATA_Act]![Actual_Cost_Cum]"
+    Expression ="ACT_REV_Curr_Proj.Actual_Curr"
+    Expression ="REV_PER_DATA_Act.Actual_Curr_Cum"
+    Alias ="Dev_Curr"
+    Expression ="[ACT_REV_Curr_Proj]![Actual_Curr]-[REV_PER_DATA_Act]![Actual_Curr_Cum]"
+    Expression ="CUT_CURR.Month_Num"
+End
+Begin Joins
+    LeftTable ="ACT_REV_Curr_Proj"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="ACT_REV_Curr_Proj.Proj_Num = REV_PER_DATA_Act.Proj_Num"
+    Flag =1
+    LeftTable ="ACT_REV_Curr_Proj"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="ACT_REV_Curr_Proj.Act_Num = REV_PER_DATA_Act.Act_Num"
+    Flag =1
+    LeftTable ="ACT_REV_Curr_Proj"
+    RightTable ="REV_PER_DATA_Act"
+    Expression ="ACT_REV_Curr_Proj.Act_Rev_Code = REV_PER_DATA_Act.Act_Rev_Code"
+    Flag =1
+    LeftTable ="REV_PER_DATA_Act"
+    RightTable ="CUT_CURR"
+    Expression ="REV_PER_DATA_Act.Year = CUT_CURR.Year"
+    Flag =1
+    LeftTable ="REV_PER_DATA_Act"
+    RightTable ="CUT_CURR"
+    Expression ="REV_PER_DATA_Act.Month = CUT_CURR.Month"
+    Flag =1
+End
+Begin OrderBy
+    Expression ="ACT_REV_Curr_Proj.Proj_Num"
+    Flag =0
+    Expression ="ACT_REV_Curr_Proj.Act_Num"
+    Flag =0
+    Expression ="ACT_REV_Curr_Proj.Act_Rev_Code"
+    Flag =0
+End
+dbBoolean "ReturnsRecords" ="-1"
+dbInteger "ODBCTimeout" ="60"
+dbByte "RecordsetType" ="0"
+dbBoolean "OrderByOn" ="0"
+dbByte "Orientation" ="0"
+dbByte "DefaultView" ="2"
+dbText "Description" ="Checks ACT_REV v REV_PER_DATA_Act for Cutoff"
+dbBoolean "FilterOnLoad" ="0"
+dbBoolean "OrderByOnLoad" ="-1"
+dbBoolean "TotalsRow" ="0"
+Begin
+    Begin
+        dbText "Name" ="ACT_REV_Curr_Proj.Actual_Cost"
+        dbText "Format" ="Standard"
+        dbByte "DecimalPlaces" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="ACT_REV_Curr_Proj.Actual_Curr"
+        dbText "Format" ="Standard"
+        dbByte "DecimalPlaces" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="REV_PER_DATA_Act.Actual_Cost_Cum"
+        dbText "Format" ="Standard"
+        dbByte "DecimalPlaces" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="REV_PER_DATA_Act.Actual_Curr_Cum"
+        dbText "Format" ="Standard"
+        dbByte "DecimalPlaces" ="0"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="Dev_ENok"
+        dbText "Format" ="Standard"
+        dbLong "AggregateType" ="-1"
+    End
+    Begin
+        dbText "Name" ="Dev_Curr"
+        dbText "Format" ="Standard"
+        dbLong "AggregateType" ="-1"
+    End
+End
+Begin
+    State =0
+    Left =0
+    Top =0
+    Right =1705
+    Bottom =973
+    Left =-1
+    Top =-1
+    Right =1689
+    Bottom =366
+    Left =0
+    Top =0
+    ColumnsShown =539
+    Begin
+        Left =38
+        Top =6
+        Right =281
+        Bottom =249
+        Top =0
+        Name ="ACT_REV_Curr_Proj"
+        Name =""
+    End
+    Begin
+        Left =425
+        Top =9
+        Right =624
+        Bottom =252
+        Top =0
+        Name ="REV_PER_DATA_Act"
+        Name =""
+    End
+    Begin
+        Left =849
+        Top =6
+        Right =1104
+        Bottom =249
+        Top =0
+        Name ="CUT_CURR"
+        Name =""
+    End
+End
